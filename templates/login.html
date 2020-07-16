@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Login {% endblock title %}
+
+{% block body %}
+
+{% ifequal error "yes" %}
+<script>
+  alert('logged In Successfully');
+  window.location=("{% url 'home' %}");  
+</script>
+{% endifequal %}
+
+
+{% ifequal error "no" %}
+<script>
+  alert('invalid login credentials, try again');
+</script>
+{% endifequal %}
+
+<div class="container">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+  <form class="box" action="/login"  method="POST">
+    {% csrf_token %}
+    <h1>Login</h1>
+    <input type="text"  name="uname" placeholder="Username">
+    <input type="password"  name="pwd" placeholder="Password">
+    <input type="submit" name=""  value="Login" >
+  </form>
+</div>
+{% endblock body  %} 
+
+
+

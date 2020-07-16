@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} appointment {% endblock title %}
+
+
+{% block body %} 
+<style>
+  .container h2{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: white;
+    background: black;
+    position: relative;
+    border-radius: 50%;
+
+}
+  body{
+    background: #34495e;
+}
+</style>
+<div class="container-fluid px-0 mb-4">
+  <img src="/static/images/13.jpeg">
+</div>
+<div class="container py-4">
+  <h1 class="text-center">MAKE APPOINTMENT</h1>
+    <form method="POST" action="/services">
+      {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleFormControlInput1">NAME OF THE PATIENT</label>
+          <input type="name" class="form-control" id="name" name = "name" placeholder="NAME OF THE PATIENT">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" name = "email" placeholder="ENTER YOUR EMAIL">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">PHONE NUMBER</label>
+          <input type="phone" class="form-control" id="phone" name = "phone" placeholder="ENTER YOUR PHONE NUMBER">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">ADDRESS</label>
+          <input type="address" class="form-control" id="address" name = "address" placeholder="ENTER YOUR ADDRESS">
+        </div>
+       
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">TELL US ABOUT THE CURRENT CONDITION</label>
+          <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">SUBMITT</button>
+      </form>
+
+</div>
+ {% endblock body %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+.mydivstyle:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    transform: translate(-20px);
+    background: #2f3542;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.card{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+.mydivstyle .card:hover{
+    background: none;
+    color: #ff6348;
+    transition: scale(1.6);
+}
+.container h2{
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: white;
+    background: black;
+    position: relative;
+    border-radius: 50%;
+
+}
+body{
+    background: #34495e;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js">
+<div class="container" style="margin-top: 50px">
+<h2 class="text-center ">Contact Us</h2>
+<br><br>
+
+<div class="row mt-5 text-center ">
+    <div class="col-lg-3 col-sm-6 mydivstyle">
+        <i class=" card fas fa-phone-square"></i>
+    <p class="mt-3 font-weight-bold"><a class="text-danger" href="tel: +91 76473263283">+91 76473263283</p></a>    
+    </div>
+    
+    <div class="col-lg-3 col-sm-6 mydivstyle">
+        <i class=" card fas fa-envelope"></i>
+    <p class="mt-3 font-weight-bold"><a class="text-danger" href="mailto:devsharma2404@gmail.com">devsharma2404@gamil.com</a></p>    
+</div>
+
+    <div class=" col-lg-3 col-sm-6 mydivstyle">
+        <i class=" card fas fa-map-marker-alt"></i> 
+    <p class="mt-3 font-weight-bold"><a class="text-danger" href="http://maps.google.com/maps?q=Indrapur+Bhopal">Indrapur Bhopal</a></p>    
+</div>
+
+    <div class="col-lg-3 col-sm-6 mydivstyle">
+        <i class=" card fas fa-phone-square"></i> 
+    <p class="mt-3 font-weight-bold text-danger">9:00 AM To 7:00 PM</p>    
+</div>
+
+
+</div>
+</div>
+
+
+{% endblock body %}
